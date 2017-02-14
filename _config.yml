@@ -4,7 +4,7 @@ bio:                '明理 勤思 自律 慎独'
 description:        "Test"
 reading_time:       true
 words_per_minute:   200
-logo:               'assets/img/logo.png'
+logo:               'assets/img/display_photo.jpg'
 background:         'assets/img/placeholder-big.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
@@ -26,7 +26,7 @@ sass:
   style:            compressed
 
 # Comments
-disqus_shortname:   taylantatli
+disqus_shortname:   Key
 
 # Social
 # if you don't have any of social below, comment the line.
@@ -61,6 +61,7 @@ instagram:          username
 #keybase:           username
 #xmpp:              username@server.com
 #hackernews:        username
+# (want to  add)  codewars:            username
 
 # Gems
 gems:

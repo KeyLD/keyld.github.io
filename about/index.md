@@ -1,37 +1,27 @@
 ---
 layout: page
-title: About the Theme
-tags: [about, Jekyll, theme, moon]
-date: 2016-03-21
+title: About Me
+tags: [about]
+date: 2017-2-14
 comments: false
 ---
-    
-<center><a href="http://taylantatli.github.io/Moon"><b>Moon</b></a> is a minimal, one column jekyll theme.</center>
+<center>我是许健豪，Key是我的英文名，现在是一名在武汉的学生。</center>
+<center>大一开始玩ACM，~~奖项暂无。~~大一下学期开始玩Linux,大二上学期开始接触Ruby。曾想在一个寒假时间内用rails做一个个人主页，然而在不断接触学习中发现自己的基础各种不足，无奈只能用jekyll制作一个临时博客</center>
+下一步，请等待……
 
-## Features
-* Minimal, you can focus on your content
-* Responsive
-* Disqus integration
-* Syntax highlighting
-* Optional post image
-* Social icons
-* Page for sharing projects
-* Optional background image
-* Simple navigation menu
-* MathJax support
+<br>
+<br>
 
-## Preview
+##开发技能栈
+* C++(在学)
+* Qt(在学)
+* Linux(熟悉）
+* Ruby(在学)
+* Ruby on Rails(在学)
+* HTML(在学)
+* CSS(在学)
+* Mysql
 
-{% capture images %}
-    https://cloud.githubusercontent.com/assets/754514/14509720/61c61058-01d6-11e6-93ab-0918515ecd56.png
-    https://cloud.githubusercontent.com/assets/754514/14509716/61ac6c8e-01d6-11e6-879f-8308883de790.png
-{% endcapture %}
-{% include gallery images=images caption="Screenshots of Moon Theme" cols=2 %}
+##个人主要作品
 
-See a [live version of Moon](http://taylantatli.github.io/Moon) hosted on GitHub.
-
-## Getting Started
-
-To learn how to install and use this theme check out the [Setup Guide](http://taylantatli.me/Moon/moon-theme/) for more information.
-      
-[Install Moon](https://github.com/TaylanTatli/Moon){: .btn}
+~~暂时没什么拿得出手的……~~
