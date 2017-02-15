@@ -9,8 +9,6 @@ tag:
 comments: true
 ---
 
-# 如何在Linux中手动连接无线网络
-
 无线网的连接在linux中总是会出现这样那样的问题（个人经历是这样的）
 尤其是学校的校园网，掉的真是恶心，一掉就再也连不上
 我曾经试过NetworkManager，connman，netctl等自动连接工具，但效果不佳
@@ -18,7 +16,7 @@ comments: true
 
 一下是手动连接的步骤
 
-##0. 配置准备
+## 0. 配置准备
 
 ### 0.1 我们所需要的工具有
 
@@ -33,14 +31,16 @@ comments: true
 这里必须强调一下**自动连接服务的运行将导致手动连接无法起作用**
 另一方面，我也說一下，不同的自动连接服务同时打开从而导致无法自动连接也是常见的问题
 所以如果读者决定以后要尝试手动连接的话，请先把自动连接服务关闭
+
 #### 关闭的方法
 首先介绍一下管理服务的进程
+
 > Linux系统中，init有以下三种主要的实现版本:
 > 1. System V init:传统的顺序init(Sys V, 读作"sys-five")，为Red Hat Enterprise Linux 和其他发行版使用
 > 2. systemd 新出现的init。很多Linux发行版已经或者正在计划转向 systemd。
 > 3. Ubuntu 上的init。不过在本书编写是，Ubuntu 也计划转向systemd
 
-（选自《精通LInux》）</br>
+（选自《精通LInux》)
 主要就是以上三个，那我就以systemd介绍一下怎么关闭*（会的读者可以自行跳过*
 `systemctl status` 查看所有的服务
 `sytemctl stop <Tab>` 可以查看正在运行的服务(我这里用的是zsh，不知道bash可不可以
@@ -49,6 +49,7 @@ comments: true
 至于哪些是自动连接服务，还请读者自行判断（因为太多了……
 
 ## 1 获取相关信息
+
 + 首先获取接口名
 `iw dev`
 在interface后的就是你的主机借口名，我这里是wlp4s0
