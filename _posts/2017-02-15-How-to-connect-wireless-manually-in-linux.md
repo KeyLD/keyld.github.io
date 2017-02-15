@@ -40,8 +40,9 @@ comments: true
 > 2. systemd 新出现的init。很多Linux发行版已经或者正在计划转向 systemd。
 > 3. Ubuntu 上的init。不过在本书编写是，Ubuntu 也计划转向systemd
 
-（选自《精通LInux》)<br/>
-主要就是以上三个，那我就以systemd介绍一下怎么关闭*（会的读者可以自行跳过*<br/>
+（选自《精通LInux》)
+
+主要就是以上三个，那我就以systemd介绍一下怎么关闭*（会的读者可以自行跳过*
 
 + systemctl status` 查看所有的服务
 + sytemctl stop <Tab>` 可以查看正在运行的服务(我这里用的是zsh，不知道bash可不可以
@@ -60,17 +61,20 @@ comments: true
 + 获取接口状态
 `iw dev show wlp4s0`
 
->         3: wlp4s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group defalt qlen 1000 link/ether b8:86:87:da:68:ba brd ff:ff:ff:ff:ff:ff
+>     3 :wlp4s0:<BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc
+>     mq state UP mode DEFAULT group defalt qlen 1000 link/ether
+>     b8:86:87:da:68:ba brd ff:ff:ff:ff:ff:ff
 
 其中 `<BROADCAST,MULTICAST,UP,LOWER_UP>`中的 `UP`显示借口已经打开
 
 + 查看接入点
-`iw dev wlp4s0 scan | less` <br/>
+`iw dev wlp4s0 scan | less`
+
 需要关注的信息：
 
-+ ** SSID: ** 网络的名称
-+ ** Signal: ** 用 dbm (-100 to 0) 报告的无线信号强度。数值越接近零，信号越好。
-+ ** Security: **   没有直接报告, 检查 capability 开头的行，如果有 Privacy 信息，例如 capability: ESS Privacy ShortSlotTime (0x0411), 表示网络具有某种程度的保护.
++  ** SSID: ** 网络的名称
++  ** Signal: ** 用 dbm (-100 to 0) 报告的无线信号强度。数值越接近零，信号越好。
++  ** Security: **   没有直接报告, 检查 capability 开头的行，如果有 Privacy 信息，例如 capability: ESS Privacy ShortSlotTime (0x0411), 表示网络具有某种程度的保护.
 
 > 如果有 RSN 信息，网络被 Robust Security Network(WPA2) 协议保护。
 > 如果有 WPA 信息，网络被 Wi-Fi Protected Access 协议保护。
@@ -89,19 +93,25 @@ comments: true
 `iw wlp4s0 connect myssid`
 + WEP
 使用十六进制或 ASCII 密码(格式是自动识别出来的，因为 WEP 密码长度是固定的): 
-`iw dev wlan0 connect your_essid key 0:your_key` <br/>
+`iw dev wlan0 connect your_essid key 0:your_key` 
+
 使用十六进制或 ASCII 密码，第三个是默认 (从0计数，共四个): 
 `iw dev wlan0 connect your_essid key d:2:your_key`
 + WPA/WPA2
-`wpa_supplicant -B -i wlp4s0 -c <(wpa_passphrase your_SSID your_key)` <br/>
+`wpa_supplicant -B -i wlp4s0 -c <(wpa_passphrase your_SSID your_key)` 
+
 最后可以通过 `iw dev wlp4s0 link`确认是否已经连接成功
 
 ## 3. 获取ip
 这里我使用dhcp
-`dhcpcd wlp4s0`<br/>
-其实还可以使用静态ip分配，但是我没用过，这里是archwiki的写法<br/>
-`ip addr add 192.168.0.2/24 dev wlp4s0`<br/>
-`ip route add default via 192.168.0.1`<br/>
+`dhcpcd wlp4s0`
+
+其实还可以使用静态ip分配，但是我没用过，这里是archwiki的写法
+
+`ip addr add 192.168.0.2/24 dev wlp4s0`
+
+`ip route add default via 192.168.0.1`
+
 
 ---
 
@@ -110,6 +120,6 @@ comments: true
 + `ip link set wlp4s0`
 + `iw wlp4s0 connect WUST_Wireless`
 + `dhcpcd wlp4s0`
-最后再随便开个网页登陆即可<br/>
+最后再随便开个网页登陆即可
 
 最后，假如这样连接又断了怎么办呢，说实话，我用到现在还没有断过，如果真的断了，那就先kill进程，再同样的方法重新连接就好了。
