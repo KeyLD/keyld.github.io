@@ -15,19 +15,19 @@ permalink:          /:title/
 markdown:           kramdown
 highlighter:        rouge
 kramdown:
-  input: GFM
-  extensions:
-    - autolink
-    - footnotes
-    - smart
-  syntax_highlighter: rouge
-  enable_coderay:   true
-  coderay:
-    coderay_line_numbers:  nil
-  #  auto_ids:         true
-  #  footnote_nr:      1
-  #  entity_output:    as_char
-  #  toc_levels:       1..6
+    auto_ids:         true
+    footnote_nr:      1
+    entity_output:    as_char
+    toc_levels:       1..6
+    enable_coderay:   false
+  #input: GFM
+  #extensions:
+  #  - autolink
+  #  - footnotes
+  #  - smart
+  #  coderay:
+  #  coderay_line_numbers:  nil
+
 mathjax:            true
 sass:
   sass_dir:         _sass
@@ -47,7 +47,7 @@ disqus_shortname:   Key
 #bing-verify:
 email:              keyld777@gmail.com
 #twitter:            username
-#facebook:           username
+facebook:           jianhao.Keyld
 github-url:         keyld
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
 #linkedin:          username
