@@ -68,8 +68,8 @@ github-url:         keyld
 #codepen:           username
 #keybase:           username
 #xmpp:              username@server.com
-#hackernews:        username
-#       #######codewars:           users/KeyLD
+hackernews:         nodekey
+codewars:           KeyLD
 
 # Gems
 gems:
