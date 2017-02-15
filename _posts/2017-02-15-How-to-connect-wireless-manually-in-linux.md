@@ -9,12 +9,12 @@ tag:
 comments: true
 ---
 
-无线网的连接在linux中总是会出现这样那样的问题（个人经历是这样的）
-尤其是学校的校园网，掉的真是恶心，一掉就再也连不上
-我曾经试过NetworkManager，connman，netctl等自动连接工具，但效果不佳
-非常无奈地我只能去学手动连接，发现居然十分稳定，只要连上去之后根本不会掉线
+无线网的连接在linux中总是会出现这样那样的问题（个人经历是这样的）。
+尤其是学校的校园网，掉的真是恶心，一掉就再也连不上。
+我曾经试过NetworkManager，connman，netctl等自动连接工具，但效果不佳。
+非常无奈地我只能去学手动连接，发现居然十分稳定，只要连上去之后根本不会掉线。
 
-一下是手动连接的步骤
+以下是手动连接的步骤
 
 ## 0. 配置准备
 
@@ -42,7 +42,7 @@ comments: true
 
 （选自《精通LInux》)
 
-主要就是以上三个，那我就以systemd介绍一下怎么关闭*（会的读者可以自行跳过*
+主要就是以上三个，那我就以systemd介绍一下怎么关闭   (*会的读者可以自行跳过*
 
 + systemctl status` 查看所有的服务
 + sytemctl stop <Tab>` 可以查看正在运行的服务(我这里用的是zsh，不知道bash可不可以
@@ -53,28 +53,23 @@ comments: true
 
 ## 1 获取相关信息
 
-+ 首先获取接口名
-`iw dev`
++ 首先获取接口名  `iw dev`
 在interface后的就是你的主机借口名，我这里是wlp4s0
-+ 激活内核接口
-`iw dev set wlp4s0 up`
-+ 获取接口状态
-`iw dev show wlp4s0`
++ 激活内核接口  `iw dev set wlp4s0 up`
++ 获取接口状态  `iw dev show wlp4s0`
 
->     3 :wlp4s0:<BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc
->     mq state UP mode DEFAULT group defalt qlen 1000 link/ether
->     b8:86:87:da:68:ba brd ff:ff:ff:ff:ff:ff
+>         3: wlp4s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group defalt qlen 1000 link/ether b8:86:87:da:68:ba brd ff:ff:ff:ff:ff:ff
 
 其中 `<BROADCAST,MULTICAST,UP,LOWER_UP>`中的 `UP`显示借口已经打开
 
 + 查看接入点
-`iw dev wlp4s0 scan | less`
+`iw dev wlp4s0 scan | less` 
 
 需要关注的信息：
 
-+  ** SSID: ** 网络的名称
-+  ** Signal: ** 用 dbm (-100 to 0) 报告的无线信号强度。数值越接近零，信号越好。
-+  ** Security: **   没有直接报告, 检查 capability 开头的行，如果有 Privacy 信息，例如 capability: ESS Privacy ShortSlotTime (0x0411), 表示网络具有某种程度的保护.
++ **SSID:** 网络的名称
++ **Signal:** 用 dbm (-100 to 0) 报告的无线信号强度。数值越接近零，信号越好。
++ **Security:**   没有直接报告, 检查 capability 开头的行，如果有 Privacy 信息，例如 capability: ESS Privacy ShortSlotTime (0x0411), 表示网络具有某种程度的保护.
 
 > 如果有 RSN 信息，网络被 Robust Security Network(WPA2) 协议保护。
 > 如果有 WPA 信息，网络被 Wi-Fi Protected Access 协议保护。
@@ -93,8 +88,7 @@ comments: true
 `iw wlp4s0 connect myssid`
 + WEP
 使用十六进制或 ASCII 密码(格式是自动识别出来的，因为 WEP 密码长度是固定的): 
-`iw dev wlan0 connect your_essid key 0:your_key` 
-
+`iw dev wlan0 connect your_essid key 0:your_key` <br/>
 使用十六进制或 ASCII 密码，第三个是默认 (从0计数，共四个): 
 `iw dev wlan0 connect your_essid key d:2:your_key`
 + WPA/WPA2
@@ -104,6 +98,7 @@ comments: true
 
 ## 3. 获取ip
 这里我使用dhcp
+
 `dhcpcd wlp4s0`
 
 其实还可以使用静态ip分配，但是我没用过，这里是archwiki的写法
@@ -112,10 +107,9 @@ comments: true
 
 `ip route add default via 192.168.0.1`
 
-
 ---
 
-我以学校校园网为例，简单示范一下，其实只需要三行命令
+现在我以学校校园网为例，简单示范一下，其实只需要三行命令
 
 + `ip link set wlp4s0`
 + `iw wlp4s0 connect WUST_Wireless`
