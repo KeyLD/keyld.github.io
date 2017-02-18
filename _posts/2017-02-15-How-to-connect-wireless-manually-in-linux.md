@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "How to connect wireless manully in Linux"
+title:  "如何在Linux下手动连接无线网"
 date:   2017-02-15
-excerpt: "详细介绍如何手动连接无线网络"
+excerpt: "详细介绍如何在Linux手动连接无线网络"
 tag:
 - Linux 
 - Network
@@ -44,10 +44,10 @@ comments: true
 
 主要就是以上三个，那我就以systemd介绍一下怎么关闭   (*会的读者可以自行跳过*
 
-+ systemctl status` 查看所有的服务
-+ sytemctl stop <Tab>` 可以查看正在运行的服务(我这里用的是zsh，不知道bash可不可以
-+ systemctl start/stop 服务名` 开启/关闭 该服务
-+ systemctl enable/disable 服务名`   开机 自启/禁自启 该服务
++ `systemctl status` 查看所有的服务
++ `sytemctl stop <Tab>` 可以查看正在运行的服务(我这里用的是zsh，不知道bash可不可以
++ `systemctl start/stop 服务名` 开启/关闭 该服务
++ `systemctl enable/disable 服务名`   开机 自启/禁自启 该服务
 
 至于哪些是自动连接服务，还请读者自行判断（因为太多了……
 
