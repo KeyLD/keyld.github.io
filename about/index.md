@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Me
+title: 关于我
 tags: [about]
 date: 2017-2-14
 comments: false
@@ -30,4 +30,4 @@ comments: false
 
 ~~暂时没什么拿得出手的……~~
 
-Updated Time: 2017.2.14
+<center>Updated Time: 2017.2.14</center>

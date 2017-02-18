@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://keyld.github.io//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://keyld.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://keyld.github.io//" rel="alternate" type="text/html" /><updated>2017-02-15T21:35:02+08:00</updated><id>https://keyld.github.io//</id><title type="html">Key</title><subtitle>acmer archer rubyer</subtitle><entry><title type="html">How to connect wireless manully in Linux</title><link href="https://keyld.github.io//How-to-connect-wireless-manually-in-linux/" rel="alternate" type="text/html" title="How to connect wireless manully in Linux" /><published>2017-02-15T00:00:00+08:00</published><updated>2017-02-15T00:00:00+08:00</updated><id>https://keyld.github.io//How-to-connect-wireless-manually-in-linux</id><content type="html" xml:base="https://keyld.github.io//How-to-connect-wireless-manually-in-linux/">&lt;p&gt;无线网的连接在linux中总是会出现这样那样的问题（个人经历是这样的）。
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://keyld.github.io//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://keyld.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://keyld.github.io//" rel="alternate" type="text/html" /><updated>2017-02-18T14:04:24+08:00</updated><id>https://keyld.github.io//</id><title type="html">Key</title><subtitle>Acmer Archer Rubyer</subtitle><entry><title type="html">如何在Linux下手动连接无线网</title><link href="https://keyld.github.io//How-to-connect-wireless-manually-in-linux/" rel="alternate" type="text/html" title="如何在Linux下手动连接无线网" /><published>2017-02-15T00:00:00+08:00</published><updated>2017-02-15T00:00:00+08:00</updated><id>https://keyld.github.io//How-to-connect-wireless-manually-in-linux</id><content type="html" xml:base="https://keyld.github.io//How-to-connect-wireless-manually-in-linux/">&lt;p&gt;无线网的连接在linux中总是会出现这样那样的问题（个人经历是这样的）。
 尤其是学校的校园网，掉的真是恶心，一掉就再也连不上。
 我曾经试过NetworkManager，connman，netctl等自动连接工具，但效果不佳。
 非常无奈地我只能去学手动连接，发现居然十分稳定，只要连上去之后根本不会掉线。&lt;/p&gt;
@@ -40,10 +40,10 @@
 &lt;p&gt;主要就是以上三个，那我就以systemd介绍一下怎么关闭   (&lt;em&gt;会的读者可以自行跳过&lt;/em&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;systemctl status` 查看所有的服务&lt;/li&gt;
-  &lt;li&gt;sytemctl stop &lt;Tab&gt;` 可以查看正在运行的服务(我这里用的是zsh，不知道bash可不可以&lt;/Tab&gt;&lt;/li&gt;
-  &lt;li&gt;systemctl start/stop 服务名` 开启/关闭 该服务&lt;/li&gt;
-  &lt;li&gt;systemctl enable/disable 服务名`   开机 自启/禁自启 该服务&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;systemctl status&lt;/code&gt; 查看所有的服务&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sytemctl stop &amp;lt;Tab&amp;gt;&lt;/code&gt; 可以查看正在运行的服务(我这里用的是zsh，不知道bash可不可以&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;systemctl start/stop 服务名&lt;/code&gt; 开启/关闭 该服务&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;systemctl enable/disable 服务名&lt;/code&gt;   开机 自启/禁自启 该服务&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;至于哪些是自动连接服务，还请读者自行判断（因为太多了……&lt;/p&gt;
@@ -129,4 +129,4 @@
 最后再随便开个网页登陆即可&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;最后，假如这样连接又断了怎么办呢，说实话，我用到现在还没有断过，如果真的断了，那就先kill进程，再同样的方法重新连接就好了。&lt;/p&gt;</content><category term="Linux" /><category term="Network" /><summary type="html">详细介绍如何手动连接无线网络</summary></entry></feed>
+&lt;p&gt;最后，假如这样连接又断了怎么办呢，说实话，我用到现在还没有断过，如果真的断了，那就先kill进程，再同样的方法重新连接就好了。&lt;/p&gt;</content><category term="Linux" /><category term="Network" /><summary type="html">详细介绍如何在Linux手动连接无线网络</summary></entry></feed>
