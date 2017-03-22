@@ -19,7 +19,9 @@ comments: true
 经查阅资料发现，**对于模板并且头文件与实现文件分开时，Gcc无法找到其方法**。~~这就完完全全是所谓的编译器问题了~~
 
 其实解决方法也是很简单的：
-+ 将include中的头文件改成实现文件。 eg #include <rbtree.h> => #include <rbtree.cpp>
++ 将include中的头文件改成实现文件。
+
+    eg #include <rbtree.h> => #include <rbtree.cpp>
 + 在头文件的最后 include 实现文件。
 
 实际上这两个方法是一个道理，就是将两个文件并成一个文件。
