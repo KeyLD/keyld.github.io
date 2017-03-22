@@ -26,10 +26,10 @@ comments: true
    `echo "Key\c";echo " is handsome"`
    > Key is handsome
 2. **printf**
+
    printf 是shell的格式化输出,其用法除了括号与逗号外基本和C语言一致
    `printf "%s is a %s man\n" "Key" "handsome"`
    > Key is a handsome man
-   
    *Note* : 并非所有shell的printf都支持浮点输出，若不支持可用 awk 自带的 printf
 
 #### string
@@ -37,12 +37,14 @@ comments: true
 
    expr常被用于shell中的算术计算，但它也具有字符串操作的能力
    + 字符查找
+
    `expr index "Key is a handsome man" "hand"`
         > 8
         
         他的结果是 8 如果你仔细数一下 hand是第10位置，而第8是a。没错，这个命令只能查找单个字符，
         匹配并返回第一个 所要索引的字符串中第一个匹配的字符。
    + 选取子串
+
    `expr substr "Key is a handsome man" 1 3`
         > Key
 
@@ -52,20 +54,20 @@ comments: true
 
     str="abbc,def,ghi,abcjkl"
 
-命令              | 结果                 |补充说明
-------------------|----------------------|--------
-`echo ${str#a*c}` | `,def,ghi,abcjkl`    | 一个井号(#) 表示从左边截取掉最短的匹配 
-`echo ${str##a*c}`   |  `jkl，`               |两个井号(##) 表示从左边截取掉最长的匹配
-`echo ${str#"a*c"}`  |  `abbc,def,ghi,abcjkl`| 因为str中没有"a*c"子串
-`echo ${str##"a*c"}` |  `abbc,def,ghi,abcjkl`| 同理
-`echo ${str#*a*c*}` |                     |全部删除
-`echo ${str##*a*c*}` |                    |全部删除 
-`echo ${str#d*f)`    |  `abbc,def,ghi,abcjkl,`|
-`echo ${str#*d*f}`  |  `,ghi,abcjkl`|
-`echo ${str%a*l}`    |  `abbc,def,ghi`|  一个百分号(%)表示从右边截取最短的匹配
-`echo ${str%%b*l}`   |  `a`  | 两个百分号(%%)表示从右边截取最长匹配
-`echo ${str%a*c}`   | `abbc,def,ghi,abcjkl`|
+    命令              | 结果                 |补充说明
+    ------------------|----------------------|--------
+    `echo ${str#a*c}` | `,def,ghi,abcjkl`    | 一个井号(#) 表示从左边截取掉最短的匹配 
+    `echo ${str##a*c}`   |  `jkl，`               |两个井号(##) 表示从左边截取掉最长的匹配
+    `echo ${str#"a*c"}`  |  `abbc,def,ghi,abcjkl`| 因为str中没有"a*c"子串
+    `echo ${str##"a*c"}` |  `abbc,def,ghi,abcjkl`| 同理
+    `echo ${str#*a*c*}` |                     |全部删除
+    `echo ${str##*a*c*}` |                    |全部删除 
+    `echo ${str#d*f)`    |  `abbc,def,ghi,abcjkl,`|
+    `echo ${str#*d*f}`  |  `,ghi,abcjkl`|
+    `echo ${str%a*l}`    |  `abbc,def,ghi`|  一个百分号(%)表示从右边截取最短的匹配
+    `echo ${str%%b*l}`   |  `a`  | 两个百分号(%%)表示从右边截取最长匹配
+    `echo ${str%a*c}`   | `abbc,def,ghi,abcjkl`|
 
-*Note* : 自带命令的匹配都必须从头（尾）开始匹配，无法直接匹配中间子串
+    *Note* : 自带命令的匹配都必须从头（尾）开始匹配，无法直接匹配中间子串
 
 <center>Updated Time: 3.23 0:51</center>
