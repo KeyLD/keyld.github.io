@@ -28,8 +28,10 @@ comments: true
 2. **printf**
 
    printf 是shell的格式化输出,其用法除了括号与逗号外基本和C语言一致
+
    `printf "%s is a %s man\n" "Key" "handsome"`
    > Key is a handsome man
+
    *Note* : 并非所有shell的printf都支持浮点输出，若不支持可用 awk 自带的 printf
 
 #### string
@@ -38,14 +40,14 @@ comments: true
    expr常被用于shell中的算术计算，但它也具有字符串操作的能力
    + 字符查找
 
-   `expr index "Key is a handsome man" "hand"`
+        `expr index "Key is a handsome man" "hand"`
         > 8
         
         他的结果是 8 如果你仔细数一下 hand是第10位置，而第8是a。没错，这个命令只能查找单个字符，
         匹配并返回第一个 所要索引的字符串中第一个匹配的字符。
    + 选取子串
 
-   `expr substr "Key is a handsome man" 1 3`
+        `expr substr "Key is a handsome man" 1 3`
         > Key
 
    *Note* : expr命令的字符串位置是从1开始的
