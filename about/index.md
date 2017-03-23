@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 关于我
+title: About Me
 tags: [about]
 date: 2017-2-14
 comments: false

@@ -1,6 +1,6 @@
 ---
 layout: project
-title: 所有项目
+title: All Projects
 excerpt: "A List of Projects"
 comments: false
 ---
