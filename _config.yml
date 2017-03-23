@@ -34,7 +34,7 @@ sass:
   style:            compressed
 
 # Comments
-disqus_shortname:   Key
+disqus_shortname:   nodekey
 
 # Social
 # if you don't have any of social below, comment the line.
